@@ -96,7 +96,6 @@ def all_holidays_with_bbq(holiday_hash)
   puts "#{key} + #{data}"
   }
   }
-returnString
 end
 
 
