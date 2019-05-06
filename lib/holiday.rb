@@ -90,14 +90,13 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
+  returnString =[]
   holiday_hash.each{|key,value| 
-  puts "#{key.capitalize}:"
   value.each{|attri,data| 
-  if attri.to_s.split("_").length>1
-  puts "  #{attri.to_s.split("_").collect{|word| word.capitalize}.join(" ")}: #{data.join(", ")}"
-  else
-  puts "  #{attri.to_s.capitalize}: #{data.join(", ")}"
+  if data=="BBQ"
+    returnString << key
   end
+  
   }
   }
 end
