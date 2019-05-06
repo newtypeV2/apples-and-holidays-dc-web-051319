@@ -96,9 +96,9 @@ def all_holidays_with_bbq(holiday_hash)
   if data=="BBQ"
     returnString << key
   end
-  
   }
   }
+returnString
 end
 
 
