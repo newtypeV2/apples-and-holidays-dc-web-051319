@@ -94,7 +94,7 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each{|key,value| 
   value.each{|attri,data| 
   if data=="BBQ"
-    rString << key
+    puts key
   end
   }
   }
