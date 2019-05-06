@@ -57,8 +57,17 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  keyCheck = ""
-  holiday_hash.each { |key,value| puts "#{key.capitalize}:"}
+  holiday_hash.each{|key,value| 
+  puts "#{key.capitalize}:"
+  value.each{|attri,data| 
+  if attri.to_s.split("_").length>1
+  puts "  #{attri.to_s.split("_").collect{|word| word.capitalize}.join(" ")} - #{data.join(", ")} "
+  else
+  puts "  #{attri.to_s.capitalize} - #{data.join(", ")} "
+  end
+  }
+  }
+
 end
 
 def all_holidays_with_bbq(holiday_hash)
